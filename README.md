@@ -1,7 +1,7 @@
 # SpringSecurity
 
 ## Description
-SpringSecurity est une API REST qui permet la gestion des utilisateurs et des étudiants, avec des fonctionnalités d'inscription, de connexion, et de gestion des sessions. L'application utilise **Spring Security** pour sécuriser les endpoints.
+SpringSecurity est une API REST qui permet la gestion des utilisateurs, avec des fonctionnalités d'inscription, de connexion, et de gestion des sessions. L'application utilise **Spring Security** pour sécuriser les endpoints.
 
 ## Fonctionnalités
 - Authentification des utilisateurs via Spring Security.
