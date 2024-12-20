@@ -24,7 +24,7 @@ public class UserController {
 
 
     @GetMapping("/")
-    public String greet(HttpServletRequest request){
+    public String test(HttpServletRequest request){
         return "ok, session: " + request.getSession().getId();
     }
 

@@ -13,11 +13,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import java.util.logging.Filter;
 
 @Configuration
 @EnableWebSecurity
@@ -36,7 +34,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/register","/login")
                         .permitAll()
-                        .anyRequest().authenticated()) // Toutes les requêtes nécessitent une authentification
+                        .anyRequest().authenticated()) // toutes les requêtes nécessitent une authentification
                 .httpBasic(Customizer.withDefaults()) // Active HTTP Basic Authentication
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Politique de session stateless (pas de sessions côté serveur)
@@ -57,21 +55,4 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 
-/*    @Bean
-    public UserDetailsService userDetailsService(){
-        UserDetails user1 = User
-                .withDefaultPasswordEncoder()
-                .username("bahaa")
-                .password("bahaa")
-                .roles("ADMIN")
-                .build();
-        UserDetails user2 = User
-                .withDefaultPasswordEncoder()
-                .username("bah")
-                .password("bah")
-                .roles("USER")
-                .build();
-    return new InMemoryUserDetailsManager(user1,user2);
-    }
-*/
 }
