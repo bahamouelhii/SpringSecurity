@@ -8,7 +8,7 @@ SpringSecurity est une API REST qui permet la gestion des utilisateurs, avec des
 - Gestion des étudiants (récupération authentifiée).
 
 ## Installation
-1. Clonez ce dépôt : `git clone https://github.com/ton-pseudo/springsecurity.git`
+1. Clonez ce dépôt : `git clone https://github.com/bahamouelhii/springsecurity.git`
 2. Construisez le projet avec `mvn clean install`.
 3. Lancez l'application avec `mvn spring-boot:run`.
 
